@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftOnCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBQ-4l-myJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="WRX-cP-Ys1" kind="embed" identifier="camera" id="Wj4-Xn-IED"/>
+                                </connections>
+                            </containerView>
+                            <view alpha="0.74999999999999978" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGq-It-h0S">
+                                <rect key="frame" x="0.0" y="512" width="600" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei6-aK-zU9">
+                                        <rect key="frame" x="277" y="21" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="1FF-M3-5HG"/>
+                                            <constraint firstAttribute="height" constant="46" id="IyE-C2-tY2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="captureImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="btZ-LJ-i0a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.52941176469999995" green="0.83137254900000002" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="ei6-aK-zU9" secondAttribute="centerY" id="2t6-nF-zKL"/>
+                                    <constraint firstAttribute="centerX" secondItem="ei6-aK-zU9" secondAttribute="centerX" id="EG2-x0-ekd"/>
+                                    <constraint firstAttribute="height" constant="88" id="Xdb-nq-1P5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PBQ-4l-myJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CbX-pT-h7d"/>
+                            <constraint firstAttribute="trailing" secondItem="wGq-It-h0S" secondAttribute="trailing" id="IUk-S3-klk"/>
+                            <constraint firstItem="PBQ-4l-myJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JBH-Ch-rcR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PBQ-4l-myJ" secondAttribute="bottom" id="Qtl-bQ-pcF"/>
+                            <constraint firstItem="wGq-It-h0S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="USi-Rt-T4h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wGq-It-h0S" secondAttribute="bottom" id="ZHR-Ze-cNA"/>
+                            <constraint firstAttribute="trailing" secondItem="PBQ-4l-myJ" secondAttribute="trailing" id="hmI-yJ-5Vr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Controller-->
+        <scene sceneID="8CS-MT-rll">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WRX-cP-Ys1" customClass="SOController" customModule="SwiftOnCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8pP-MD-Nby"/>
+                        <viewControllerLayoutGuide type="bottom" id="uOE-c8-Qjn"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Sdh-pd-6xf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0X-5g-5Dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="1126"/>
+        </scene>
+    </scenes>
+</document>
